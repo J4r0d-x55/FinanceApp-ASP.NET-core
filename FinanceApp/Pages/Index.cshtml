@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "News";
+
+    var nextOffset = @Model.news.Pagination.Count + @Model.news.Pagination.Offset;
+
+
+    <div class="row d-flex justify-content-center mt-70 mb-70">
+        <div class="col-md-12">
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+                    <h5 class="card-title">Live Finance News</h5>
+                    <div class="vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+
+                        @foreach (var article in Model.news.Data)
+                        {
+
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-success"> </i> </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title text-info"><a href="@article.Url">@article.Title</a></h4>
+                                        <p>@article.Description</p> <span class="vertical-timeline-element-date">
+                                            @article.PublishedAt.ToShortDateString()
+                                            <br>
+                                            @article.PublishedAt.TimeOfDay
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col">
+            <a asp-page-handler="LoadMoreNews" asp-route-offset="0" class="btn btn-light btn-lg w-100">Load Latest</a>
+
+        </div>
+
+        <div class="col">
+            <a asp-page-handler="LoadMoreNews" asp-route-offset="@nextOffset" class="btn btn-secondary btn-lg w-100">Load More</a>
+        </div>
+
+    </div>
+
+
+}

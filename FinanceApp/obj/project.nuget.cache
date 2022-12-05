@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Eiu/1kBqbmhR00J71RWXNBJX5G9mReunfWHeCivy2q2DP6XfU2wkesyBRi7swAuhADKYNKHtv3+xTevMgGm+3A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\FinancialApp\\FinanceApp\\FinanceApp\\FinanceApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
